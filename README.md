@@ -14,14 +14,14 @@ An enterprise-grade, modular smart campus platform designed to optimize student 
 
 ## 📂 Project Structure
 unisync/
-├── index.html # Main application markup
-├── style.css # Modern responsive styling
-├── app.js # Core application logic & event orchestration
-├── utils.js # Reusable utility functions (debounce, throttle, helpers)
-└── README.md # Project documentation
+index.html # Main application markup
+style.css # Modern responsive styling
+app.js # Core application logic & event orchestration
+utils.js # Reusable utility functions (debounce, throttle, helpers)
+README.md # Project documentation
 
 ## 🚀 Live Demo
-Check out the live deployment here: [UniSync Live URL](https://yourusername.github.io/unisync/)
+Check out the live deployment here: [UniSync Live URL]( https://ayaz-zz.github.io/Unisync/)
 
 ---
 *Built with passion as part of an intensive full-stack JavaScript mastery curriculum.*
