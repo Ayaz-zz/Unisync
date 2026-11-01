@@ -1,5 +1,6 @@
 
 // js/app.js
+import './utils.js';
 import { fetchCoursesFromDatabase } from "./api.js";
 import { renderCourseList, showOfflineBanner } from "./ui.js";
 import { loadCourses, saveCourses, isCacheValid } from "./storage.js";
