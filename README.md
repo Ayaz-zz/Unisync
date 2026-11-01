@@ -1,27 +1,49 @@
-# UniSync 🚀
-An enterprise-grade, modular smart campus platform designed to optimize student workflows, featuring robust state management, API networking resilience, and high-performance event handling.
+#  UniSync — Smart Campus & Course Management System
 
-## 🌟 Key Features
-- **Modular Architecture:** Clean separation of concerns with dedicated modules (`app.js`, `utils.js`) for maintainability.
-- **Performance Optimized:** Custom-built **Debounce** utility for high-efficiency search inputs and **Throttle** utility for high-frequency window resize/scroll events.
-- **Resilient Networking:** Implements Stale-While-Revalidate (SWR) caching strategies for seamless offline/online state handling.
-- **Modern Vanilla Stack:** Built entirely from scratch using native JavaScript ES6+ modules without heavy framework bloat, ensuring deep understanding of browser runtime mechanics.
+> A production-grade, modular JavaScript application designed for efficient campus course tracking, state persistence, performance optimization, and global error telemetry.
 
-## 🛠️ Tech Stack
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+ Modules)
-- **Tooling:** Git / GitHub, VS Code, LocalStorage State Caching
-- **Deployment:** GitHub Pages / Netlify
-
-## 📂 Project Structure
-unisync/
-index.html # Main application markup
-style.css # Modern responsive styling
-app.js # Core application logic & event orchestration
-utils.js # Reusable utility functions (debounce, throttle, helpers)
-README.md # Project documentation
-
-## 🚀 Live Demo
-Check out the live deployment here: [UniSync Live URL]( https://ayaz-zz.github.io/Unisync/)
+ **Live Demo:** [https://ayaz-zz.github.io/Unisync/](https://ayaz-zz.github.io/Unisync/)
 
 ---
-*Built with passion as part of an intensive full-stack JavaScript mastery curriculum.*
+
+##  Project Overview
+
+UniSync is a lightweight, responsive course management tool built using modern vanilla JavaScript (ES6 Modules). It provides students with real-time course filtering, state caching, offline-first capabilities, and enterprise-style error telemetry—all without relying on heavy frontend frameworks.
+
+---
+
+##  Tech Stack & Key Concepts
+
+* **Frontend:** HTML5, CSS3, JavaScript (ES6+ Modules)
+* **Hosting & Deployment:** GitHub Pages
+* **State Management & Caching:** Browser `localStorage` API
+* **Telemetry & Logging:** ISO 8601 UTC timestamps with global error listeners
+
+---
+
+##  Architecture & Key Features
+
+###  Modular Design Pattern
+The codebase follows strict separation of concerns across ES6 modules:
+* `js/app.js` — Application entry point and event listener coordination.
+* `js/utils.js` — Core utility functions (debounce, throttle, error telemetry).
+* `js/storage.js` — `localStorage` abstraction layer and cache validation logic.
+* `js/api.js` — Asynchronous data fetching abstractions.
+* `js/ui.js` — DOM manipulation and dynamic rendering methods.
+
+###  Performance Optimization
+* **Debounced Search:** Implemented custom debouncing on input fields to minimize unnecessary execution cycles during live search queries.
+* **Throttled Events:** Applied custom event throttling to high-frequency browser events (e.g., window resizing) to maintain high visual frame rates.
+
+###  Runtime Telemetry & Error Logging
+* **Global Handlers:** Utilizes `window.onerror` and `window.onunhandledrejection` to catch synchronous runtime bugs and async Promise failures automatically.
+* **ISO 8601 Logging:** Formats error telemetry with standardized `new Date().toISOString()` UTC timestamps.
+* **Local Telemetry Cache:** Persists up to 10 latest runtime errors directly in `localStorage` (`unisync_error_logs`) for seamless client-side debugging.
+
+---
+
+##  Local Setup & Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Ayaz-zz/Unisync.git](https://github.com/Ayaz-zz/Unisync.git)
